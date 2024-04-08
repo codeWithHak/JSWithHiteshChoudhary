@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        body{
+            background-color: #212121;
+            color: rgb(143, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+<script>
+    let newDiv = document.createElement("div")
+    // newDiv.innerText = "Hello World";
+    newDiv.className = "myDiv"
+    newDiv.id = "myId"
+    newDiv.setAttribute("title","myTitle")
+    newDiv.style.backgroundColor = "yellow"
+    newDiv.setAttribute("class","myClass")
+    console.log(newDiv);
+    const addText = document.createTextNode("hello, World");
+    newDiv.appendChild(addText)    
+    document.append(newDiv)
+
+</script>
+</html>

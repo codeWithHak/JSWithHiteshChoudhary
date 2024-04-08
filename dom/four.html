@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn DOM With hitesh</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+<script>
+    // let ul = document.querySelector(".language")
+    // console.log(ul);
+    // let newLi = document.createElement("li")
+    // let liText = newLi.innerText = "Python"
+    // ul.append(newLi)
+    // newLi.style.backgroundColor = "pink"
+    // newLi.style.color = "black"
+    // let li3 = document.createElement("li")
+    // li3.innerText = "REACT"
+    // li3.style.backgroundColor = "white"
+    // li3.style.color = "blue"
+    // ul.append(li3)
+    
+    function addLi (lang) {
+        let li = document.createElement("li");
+        li.innerHTML = lang;
+        document.querySelector(".language").append(li)
+    }
+
+    addLi("TypeScript")
+    addLi("REACT")
+
+        function addOpitimizedLi (lang) {
+          let li = document.createElement("li");
+          li.appendChild(document.createTextNode(lang))
+          document.querySelector('.language').appendChild(li)
+
+        }
+        addOpitimizedLi("Ruby")
+
+        // Edit 
+        let editLang = document.querySelector("li:nth-child(2)");
+        let newLi = document.createElement("li");
+        let liText = newLi.appendChild(document.createTextNode("NextJS"))
+        editLang.replaceWith(liText)
+
+        let firstLang = document.querySelector("li:first-child")
+        firstLang.outerHTML = ("<li>HelloJS</li>")
+
+        //remove
+
+        let lastLang = document.querySelector("li:last-child");
+        lastLang.remove()
+</script>
+</html>
