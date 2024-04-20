@@ -52,3 +52,34 @@
 // const addTwo = (number1,number2) => (number1 + number2)
 // const addTwo = (number1,number2) => ( {name:"HAK"})
 //     console.log(addTwo(1,2).name);
+
+
+let userInfo = {
+    username:"huzair",
+    age:18,
+    getName:function() {
+        console.log(`Username is: ${this.username}`)
+    }
+}
+
+// userInfo.getName()
+// userInfo.username = "hitesh"
+// userInfo.getName()
+
+// function myName (){
+//     // setMyName = "Huzair"
+//     // console.log(this);
+// }
+
+// myName()
+
+// let myFunc = ()=>{
+// //  setMyName = "hitesh"
+//  console.log(this);
+// }
+
+// myFunc()
+
+let myFunc = (name)=>({name:name})
+
+console.log(myFunc("huzair"));
