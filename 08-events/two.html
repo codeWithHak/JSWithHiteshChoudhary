@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Learnig Async</h1>
+    <button id="stop">Print My Name</button>
+
+
+    <script>
+    
+           document.getElementById("stop").addEventListener('click',(e)=>{
+            let myName = ()=>{
+                console.log("Huzair The G");
+            }
+            setTimeout(myName,3000)
+           })
+      
+        
+    </script>
+</body>
+</html>
