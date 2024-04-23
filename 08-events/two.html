@@ -6,20 +6,37 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Learnig Async</h1>
+    <h1>Learn Technologies Like</h1>
     <button id="stop">Print My Name</button>
 
 
     <script>
     
-           document.getElementById("stop").addEventListener('click',(e)=>{
-            let myName = ()=>{
-                console.log("Huzair The G");
-            }
-            setTimeout(myName,3000)
-           })
-      
-        
+       let sayMyName= () => {
+            console.log("Huzair");
+       }
+
+      let changeTextToHtml =()=>{ document.querySelector('h1').innerHTML="HTML";
+    }
+     
+    // let changeTextToCss =()=>{ document.querySelector('h1').innerHTML="CSS";
+    // }
+
+    // let changeTextToJs =()=>{ document.querySelector('h1').innerHTML="JavaScript";
+    // }
+    
+    
+        let change = setTimeout(changeTextToHtml, 2000)
+        // let change2 = setTimeout(changeTextToCss, 3000)
+        // let change3 = setTimeout(changeTextToJs, 4000)
+    
+    
+        let button = document.getElementById('stop');
+    
+        button.addEventListener('click',(e)=>{
+            clearTimeout(change)
+            console.log("Stopped");
+        })
     </script>
 </body>
 </html>

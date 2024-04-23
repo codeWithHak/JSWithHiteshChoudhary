@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>File 3 Js</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+
+
+    <script>
+
+        let startPrint = document.getElementById("start")
+        let stopPrint = document.getElementById("stop")
+
+
+
+        startPrint.addEventListener('click',()=>{
+            let myName = ()=>{
+                console.log("Huzair", Date.now().toLocaleString());
+            }
+            let interval = setInterval(myName,1000);
+
+            stopPrint.addEventListener('click',()=>{
+            clearInterval(interval)
+            console.log("Stopped");
+        })
+        })
+
+      
+
+        
+        
+        
+        
+    </script>
+      
+    
+    
+
+</body>
+</html>
