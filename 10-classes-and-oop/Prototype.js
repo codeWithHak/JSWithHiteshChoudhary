@@ -30,15 +30,35 @@ Object.prototype.huzair = function (){
 // Object.prototype.sherSunao = function () {
 //     return `unko dekhe se jo chehre pe ajati he ronak wo samjhte hen ke beemar ka haal acha he`
 // }
-
-const Batsman = function (){
-    babar:true
+const battingCoach ={
+    Myusuf:true
 }
 
-const fielder = function(){
-    azamKhan: false
+const fieldingCoach = {
+    gora:true
 }
 
-const coach = function (){
-    battingCoach:"M.Yusuf"
+const bowlingCoach = {
+    Azhar:true
 }
+
+const coaches = {
+    allCoaches:"There are all coaches",
+    isGood: true,
+    __proto__: battingCoach
+}
+
+battingCoach.__proto__ = fieldingCoach;
+
+Object.setPrototypeOf(battingCoach,fieldingCoach);
+
+
+let username = "Huziar";
+
+String.prototype.trueLength = function (){
+    console.log(`The length of ${this} before trim is ${this.length} but the True length of ${this.trim()} is ${this.trim().length}`)
+}
+
+console.log(username.trueLength());
+
+"  heeellllo   ".trueLength()
